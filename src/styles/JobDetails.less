@@ -1,0 +1,63 @@
+
+.job-Details{
+    min-height: 100vh;
+    width: 100%;
+    padding: 25px;
+    &__Title{
+        display: flex;
+        height: 40%;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #eeeeee;
+        &-info{
+            // flex-direction: row;
+            padding: 10px 0px;
+            &_details{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 2px;
+                gap: 10px;
+            }
+        }
+    }
+    .job-Details__Container{
+        display: flex;
+        flex-wrap: nowrap;
+        height: 60%;
+        flex-direction: row;
+        gap: 30px;
+        padding: 10px 0;
+        &-1{
+            display: flex;
+            flex-basis: 70%;
+            // flex-grow: 1;
+            min-width: 300px;
+        }
+        &-2{
+            display: flex;
+            flex-basis: 30%;
+            flex-direction: column;
+            // flex-grow: 1;
+            &-Other_openings{
+                display: flex;
+                flex-direction: column;
+                background-color: #f0f3fb;
+                border: 1px solid #e8eaf3;
+                padding: 15px;
+            }
+            &-Job_sharing{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                &_icons{
+                    display: flex;
+                    justify-content: start;
+                    text-decoration: none;
+                    align-items: center;
+                    gap: 10px;
+                }
+            }
+        }
+    }
+}
