@@ -8,7 +8,6 @@
   -  Clear individual or all filters
   -  View detailed job information
   -  Apply via external URL
-  -  Share job openings on social media (LinkedIn, Facebook, Twitter)
   -  Fully responsive and styled using LESS
 
 ## Api Documentation:
