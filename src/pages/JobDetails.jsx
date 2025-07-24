@@ -5,10 +5,12 @@ import api from '../api/jobsoid';
 import '../styles/JobDetails.less';
 
 const JobDetails = () => {
+  // State Variables
   const { id } = useParams();
   const [job, setJob] = useState(null);
   const [relatedJobs, setRelatedJobs] = useState([]);
   const navigate = useNavigate();
+  const currentUrl = `${window.location.origin}/jobs/${id}`;
   // To Fetch data using API 
   useEffect(()=>{
     api.get(`/jobs/${id}`).then(res =>{
@@ -56,9 +58,9 @@ const JobDetails = () => {
       <div className='job-Details__Container-2-Job_sharing'>
         <h4>SHARE JOB OPENINGS</h4>
         <div className='job-Details__Container-2-Job_sharing_icons'>
-        <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`} target="_blank" rel="noopener noreferrer"><Facebook /></a>
-        <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`} target="_blank" rel="noopener noreferrer"><Linkedin /></a>
-        <a href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}&text=Check this job out!`} target="_blank" rel="noopener noreferrer"><Twitter /></a>
+        <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`} target="_blank" rel="noopener noreferrer"><Facebook /></a>
+        <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`} target="_blank" rel="noopener noreferrer"><Linkedin /></a>
+        <a href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}&text=Check this job out!`} target="_blank" rel="noopener noreferrer"><Twitter /></a>
         </div>
       </div>
       </div>
